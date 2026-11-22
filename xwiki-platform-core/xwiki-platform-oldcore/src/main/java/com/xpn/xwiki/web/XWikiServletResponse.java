@@ -59,6 +59,8 @@ public class XWikiServletResponse extends HttpServletResponseWrapper
         Cookie cookie = new Cookie(cookieName, cookieValue);
         cookie.setVersion(1);
         cookie.setMaxAge(age);
+        cookie.setHttpOnly(true);
+        cookie.setSecure(true);
         getHttpServletResponse().addCookie(cookie);
     }
 
