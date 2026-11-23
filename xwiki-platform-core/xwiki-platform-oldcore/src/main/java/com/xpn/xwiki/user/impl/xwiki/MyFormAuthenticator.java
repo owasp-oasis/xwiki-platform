@@ -103,8 +103,8 @@ public class MyFormAuthenticator extends FormAuthenticator implements XWikiAuthe
             redirectBack.append(delimiter);
             redirectBack.append(sridParameter);
         }
-        response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + this.loginPage + "?"
-            + sridParameter + "&xredirect=" + URLEncoder.encode(redirectBack.toString(), "UTF-8")));
+        response.sendRedirect(request.getContextPath() + this.loginPage + "?"
+            + sridParameter + "&xredirect=" + URLEncoder.encode(redirectBack.toString(), "UTF-8"));
     }
 
     @Override
